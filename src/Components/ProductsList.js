@@ -1,25 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Products from "./Products/Products";
 import { useProducts, useProductsAction } from "./ProviderProducts";
 
 const ProductsList = () => {
   const data = useProducts(); // get data with Custom hook
   const dispatch = useProductsAction();
-
-  //GET localStorage
-  useEffect(() => {
-    console.log("get local");
-    const items = JSON.parse(localStorage.getItem("products"));
-    if (items) {
-      console.log(items);
-      return items;
-    }
-  }, []);
-
-  //SET localStorage
-  useEffect(() => {
-    localStorage.setItem("products", JSON.stringify(data));
-  }, [data]);
 
   return (
     <div>

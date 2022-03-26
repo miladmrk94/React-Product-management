@@ -1,9 +1,10 @@
-import React, { useContext, useReducer, useEffect, useState } from "react";
+import React, { useContext, useReducer, useEffect } from "react";
 
 const productsContext = React.createContext();
 const productsContextDispatcher = React.createContext();
 
-const initialProducts = [];
+// initialProduct & Get localStorage
+const initialProduct = JSON.parse(localStorage.getItem("products"));
 
 const ProviderProducts = ({ children }) => {
   const [product, dispatch] = useReducer((state, action) => {
@@ -22,10 +23,16 @@ const ProviderProducts = ({ children }) => {
           return i.id !== action.id;
         });
         return filter;
+
       default:
         return state;
     }
-  }, initialProducts);
+  }, initialProduct);
+
+  //SET localStorage
+  useEffect(() => {
+    localStorage.setItem("products", JSON.stringify(product));
+  }, [product]);
 
   return (
     <productsContext.Provider value={product}>
