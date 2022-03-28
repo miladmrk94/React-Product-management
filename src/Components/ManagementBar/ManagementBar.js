@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useProductsAction, selectOptions } from "../ProviderProducts";
+import styles from "./ManagementBar.module.scss";
 import Select from "react-select";
 
 //get options from ProviderProducts Comp
@@ -53,6 +54,10 @@ const ManagementBar = () => {
   const changeHandlerTwo = (e) => {
     setValueTwo(e.target.value);
   };
+  const restAppHandler = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
 
   useEffect(() => {
     const options = JSON.parse(localStorage.getItem("groupList"));
@@ -68,23 +73,43 @@ const ManagementBar = () => {
 
   return (
     <div>
-      <form onSubmit={groupNameSubmitHandler}>
-        <label>add new group</label>
-        <input name="groupName" onChange={changeHandlerTwo} value={valueTwo} />
-        <button type="submit">+</button>
-      </form>
-      <form onSubmit={submitHandler}>
-        <Select options={group} value={selector} onChange={selectorHandler} />
-        <input
-          type="text"
-          placeholder="Product Name..."
-          name="productName"
-          // ref={clearInput}
-          onChange={changeHandler}
-          value={value}
-        />
-        <button type="submit">ADD</button>
-      </form>
+      <h3>Add New Group:</h3>
+      <div className={styles.box__group}>
+        <form onSubmit={groupNameSubmitHandler}>
+          <input
+            name="groupName"
+            onChange={changeHandlerTwo}
+            value={valueTwo}
+            placeholder="Group Name..."
+          />
+          <button type="submit">+</button>
+        </form>
+      </div>
+
+      <h3>Add Products:</h3>
+      <div className={styles.box__product}>
+        <form onSubmit={submitHandler}>
+          <Select
+            options={group}
+            value={selector}
+            onChange={selectorHandler}
+            placeholder="Select Group..."
+          />
+          <input
+            type="text"
+            placeholder="Product Name..."
+            name="productName"
+            // ref={clearInput}
+            onChange={changeHandler}
+            value={value}
+          />
+          <button type="submit">ADD</button>
+        </form>
+      </div>
+      <div className={styles.box__rest}>
+        <button onClick={restAppHandler}>Rest App</button>
+        <h5>Clear All Data </h5>
+      </div>
     </div>
   );
 };

@@ -10,7 +10,7 @@ const getLocalStorage = JSON.parse(localStorage.getItem("products"));
 //initial select Group
 export const selectOptions = [
   { value: "aaaaa", label: "Dairy" },
-  { value: "aaaa", label: "Vegetables" },
+  { value: "aaaaaa239a", label: "Vegetables" },
 ];
 
 const ProviderProducts = ({ children }) => {
