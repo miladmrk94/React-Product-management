@@ -1,18 +1,10 @@
 @import "../../styles/colors";
 
-.container {
-  display: flex;
-  width: 200px;
-  background-color: rgb(36, 45, 173);
-  margin: 0.3rem;
-  justify-content: space-between;
-
-  .name_product {
-    color: $ProductNameColor;
-    margin-left: 1rem;
-  }
-  .delete_product {
-    color: $BtnDelete;
-    margin-right: 1rem;
-  }
+.name_product {
+  color: rgb(255, 255, 255);
+  margin-left: 1rem;
+}
+.delete_product {
+  color: $BtnDelete;
+  margin-right: 1rem;
 }

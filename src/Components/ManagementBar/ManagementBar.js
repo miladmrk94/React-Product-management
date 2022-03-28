@@ -16,10 +16,12 @@ const ManagementBar = () => {
     e.preventDefault();
     console.log(e.target.elements.groupName.value);
     const groupEvent = e.target.elements.groupName.value;
+    console.log(group);
+
     groupEvent === ""
       ? alert("Please choose a name for the group")
       : setGroup([
-          ...selectOptions,
+          ...group,
           {
             value: groupEvent,
             label: groupEvent,
@@ -67,6 +69,7 @@ const ManagementBar = () => {
   return (
     <div>
       <form onSubmit={groupNameSubmitHandler}>
+        <label>add new group</label>
         <input name="groupName" onChange={changeHandlerTwo} value={valueTwo} />
         <button type="submit">+</button>
       </form>

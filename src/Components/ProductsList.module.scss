@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  .containerTwo {
+    width: 100%;
+    display: grid;
+    // grid-template-columns: repeat(fit, minmax(250px, 250px));
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    margin: auto;
+  }
+}
