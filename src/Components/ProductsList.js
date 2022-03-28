@@ -8,6 +8,7 @@ const ProductsList = () => {
 
   return (
     <div>
+      {console.log(data)}
       {data.length > 0 ? (
         data.map((i) => {
           return (
