@@ -72,7 +72,7 @@ const ManagementBar = () => {
   }, [group]);
 
   return (
-    <div>
+    <div className={styles.container}>
       <h3>Add New Group:</h3>
       <div className={styles.box__group}>
         <form onSubmit={groupNameSubmitHandler}>

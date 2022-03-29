@@ -1,61 +1,86 @@
-.box__group {
-  display: flex;
-  height: 160px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1rem;
-  border: solid 3px rgb(139, 138, 138);
-  input {
-    width: 220px;
-    padding: 10px;
-    margin: 0.5rem;
-    border-radius: 1.5rem;
-    border: 2px solid;
-  }
-  button {
-    padding: 11px 15px 11px 15px;
-    border-radius: 1.5rem;
-    border: 2px solid;
-  }
-}
-
-.box__product {
-  display: flex;
-  height: 160px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1rem;
-  border: solid 3px rgb(139, 138, 138);
-  input {
-    width: 220px;
-    padding: 10px;
-    margin: 0.5rem;
-    border-radius: 1.5rem;
-    border: 2px solid;
-  }
-  button {
-    padding: 11px 15px 11px 15px;
-    border-radius: 1.5rem;
-    border: 2px solid;
-  }
-}
-
-.box__rest {
-  margin-top: 2rem;
+.container {
   display: flex;
   flex-direction: column;
-  height: 160px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1rem;
-  border: solid 3px rgb(139, 138, 138);
+  width: 500px;
+  transition: all 0.5s;
 
-  button {
-    padding: 11px 15px 11px 15px;
-    border-radius: 1.5rem;
-    border: 2px solid;
+  .box__group {
+    width: inherit;
+    display: flex;
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    border: solid 3px rgb(139, 138, 138);
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      input {
+        width: 220px;
+        padding: 10px;
+        margin: 0.5rem;
+        border-radius: 1.5rem;
+        border: 2px solid;
+      }
+      button {
+        padding: 11px 15px 11px 15px;
+        border-radius: 1.5rem;
+        border: 2px solid;
+      }
+    }
   }
-  h5 {
-    color: rgb(83, 83, 83);
+
+  .box__product {
+    display: flex;
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    border: solid 3px rgb(139, 138, 138);
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      input {
+        width: 220px;
+        padding: 10px;
+        margin: 0.5rem;
+        border-radius: 1.5rem;
+        border: 2px solid;
+      }
+      button {
+        padding: 11px 15px 11px 15px;
+        border-radius: 1.5rem;
+        border: 2px solid;
+      }
+    }
+  }
+  .box__rest {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    border: solid 3px rgb(139, 138, 138);
+
+    button {
+      padding: 11px 15px 11px 15px;
+      border-radius: 1.5rem;
+      border: 2px solid;
+    }
+    h5 {
+      color: rgb(83, 83, 83);
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    width: 300px;
+    transition: all 0.5s;
   }
 }

@@ -7,11 +7,11 @@
 
   .container {
     display: flex;
-    justify-content: space-between;
+
     padding: 2rem;
     flex-wrap: wrap;
     .boxOne {
-      background-color: rgb(246, 247, 253);
+      background-color: rgba(246, 247, 253, 0.6);
       width: 55vw;
       height: 70vh;
       border-radius: 1rem;
@@ -39,9 +39,9 @@
       }
     }
     .boxTwo {
-      width: 30vw;
       padding: 1rem;
       border-radius: 1rem;
+      margin: auto;
     }
   }
 }
