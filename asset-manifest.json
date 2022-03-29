@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/React-Product-management/static/css/main.f73783fe.css",
+    "main.js": "/React-Product-management/static/js/main.d90efab1.js",
+    "static/media/bg.jpg": "/React-Product-management/static/media/bg.13634a4a21984945d2ac.jpg",
+    "static/media/farmer.png": "/React-Product-management/static/media/farmer.d53f6ce28f547bd5aaef.png",
+    "static/media/logo.png": "/React-Product-management/static/media/logo.4ec846f2cf4380c1d3f7.png",
+    "index.html": "/React-Product-management/index.html",
+    "main.f73783fe.css.map": "/React-Product-management/static/css/main.f73783fe.css.map",
+    "main.d90efab1.js.map": "/React-Product-management/static/js/main.d90efab1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f73783fe.css",
+    "static/js/main.d90efab1.js"
+  ]
+}
